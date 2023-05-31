@@ -1,0 +1,51 @@
+<!DOCTYPE html>   <!--señalamos el tipo de lenguaje -->
+<html lang="es-">
+<head>
+    <!--inicismos la construccion de la pagina con el titulo, la compatibilidad y codificacion de caracteres-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrado de Texto</title>
+  <link rel="stylesheet" href="base.css"> <!--hacemos la referencia al css para que obedesca-->
+</head>
+<body>
+    <!--ponemos el texto de titulo y el que ira en las cajas con la etiqueta de referencia al css-->
+    <!--damos instrucciones en nuestro css, las instrucciones reflejadas son las siguientes: "id", "type", "mane", "class", "placeholder"-->
+    <h1 class="tittle">Cifrado de Texto</h1>
+
+  <main class="main">
+    <section class="text_box">      
+        <label for="input_texto">Solo letras sin acento</label>
+
+        <input class="text_input" type="text" name="input_texto" id="input_texto" placeholder="Ingrese el texto aqui">
+       
+            <button class="btn" value="encriptar" id="btn_encriptar">Encriptar</button> 
+            <button class="btn" value="desencriptar" id="btn_desencriptar">Desencriptar</button> 
+        
+    </section>
+  
+    <section class="text_box">
+        <label for="input_texto">Texto Cifrado</label>
+        <input class="text_input" type="text" id="msg_salida"> 
+        <button class="btn" type="button" id="btn_copy">Copiar</button> 
+    </section>
+  </main>
+<!--esta cita la informacion de contacto-->
+    <footer class="footer">
+        <p> Jose Eduardo Sandoval H. </p>
+    </footer>
+
+  <script src="algoritmo.js"></script> 
+
+    var boton1 = document.querySelector("#btn_encriptar"); 
+    boton1.onclick = encriptar;
+
+    var boton2 = document.querySelector("#btn_desencriptar"); 
+    boton2.onclick = desencriptar;
+
+    var boton3 = document.querySelector("#btn_copy");
+    boton3.onclick = copiar;
+
+    </script>
+</body>
+</html>
